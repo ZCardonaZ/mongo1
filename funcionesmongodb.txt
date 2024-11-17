@@ -1,0 +1,7 @@
+db.inventario.find({
+  dim_cm: { $elemMatch: { $gt: 25 } }
+})
+
+db.inventario.find({
+  "dim_cm.1": { $gt: 25 }
+})
